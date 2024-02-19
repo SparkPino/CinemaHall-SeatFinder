@@ -10,8 +10,8 @@ namespace BestPlaces
 		{
 			var CinemaHall = new CinemaBuilder().CreateCinemaHall();
 			var TwoBestPlace = new BestPlace().GetTwoBestSeats(CinemaHall);
-			Console.ReadKey();
-
-		}
+            Console.WriteLine("Here are the top 2 best seats in the cinema:");
+            TwoBestPlace.ForEach(a=> Console.WriteLine($"Row:{a.Row}, Seat:{a.NumberOfSeat}"));
+        }
 	}
 }
